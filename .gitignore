@@ -1,4 +1,4 @@
-
+./.idea/
 thirdparty/libtorch/build-hash
 thirdparty/libtorch/build-version
 thirdparty/libtorch/include/sleef.h
@@ -1601,3 +1601,5 @@ thirdparty/libtorch/share/cmake/Tensorpipe/TensorpipeTargets-release.cmake
 thirdparty/libtorch/share/cmake/Tensorpipe/TensorpipeTargets.cmake
 thirdparty/libtorch/share/cmake/Torch/TorchConfig.cmake
 thirdparty/libtorch/share/cmake/Torch/TorchConfigVersion.cmake
+/.idea/
+/cmake-build-debug/
