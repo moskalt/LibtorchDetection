@@ -1603,3 +1603,5 @@ thirdparty/libtorch/share/cmake/Torch/TorchConfig.cmake
 thirdparty/libtorch/share/cmake/Torch/TorchConfigVersion.cmake
 /.idea/
 /cmake-build-debug/
+/build/CMakeFiles/
+/build/
