@@ -1605,3 +1605,6 @@ thirdparty/libtorch/share/cmake/Torch/TorchConfigVersion.cmake
 /cmake-build-debug/
 /build/CMakeFiles/
 /build/
+thirdparty/libtorch/include/ATen/cuda/cub.cuh
+thirdparty/libtorch/include/torch/csrc/jit/tensorexpr/operators/conv2d.h
+.vscode/c_cpp_properties.json
