@@ -1,8 +1,0 @@
-//
-// Created by lordmoskalt on 4/10/21.
-//
-
-#ifndef LIBTORCHDETECTION_DETECTION_H
-#define LIBTORCHDETECTION_DETECTION_H
-
-#endif //LIBTORCHDETECTION_DETECTION_H
