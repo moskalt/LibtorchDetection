@@ -1608,3 +1608,4 @@ thirdparty/libtorch/share/cmake/Torch/TorchConfigVersion.cmake
 thirdparty/libtorch/include/ATen/cuda/cub.cuh
 thirdparty/libtorch/include/torch/csrc/jit/tensorexpr/operators/conv2d.h
 .vscode/c_cpp_properties.json
+.vscode/settings.json
