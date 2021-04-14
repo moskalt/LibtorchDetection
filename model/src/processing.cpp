@@ -21,18 +21,6 @@ int main(int argc, const char* argv[]){
         std::cerr << "usage: processing <path-to-exported-script-model>\n";
         return -1;
     }
-    srand(time(NULL));
-    torch::Tensor a;
-    char* array = new char[BUFF_SIZE];
-    for(size_t i = 0; i < BUFF_SIZE; i++){
-        array[i] = (char)rand()%90 + 10;
-    }
-    int64_t* int_array = new int64_t[BUFF_SIZE];
-    for(size_t i = 0; i < BUFF_SIZE; ++i){
-        int_array[i] = (int64_t)array[i];
-    }
-    auto options = torch::TensorOptions().dtype(torch::kFloat64);
-    torch::Tensor tharray = torch::from_blob(int_array, {1,1,416,416}, options);
     torch::jit::script::Module module;
     try{
         module = torch::jit::load(argv[1]);
@@ -42,5 +30,10 @@ int main(int argc, const char* argv[]){
         return -1;
     }
     std::cout << "ok" << std::endl;
+    std::vector<torch::jit::IValue> inputs;
+    auto input_tensor = torch::ones({1,3,416,416});
+    inputs.push_back(input_tensor);
+    auto out = module.forward(inputs);
+    std::cout << out << std::endl;
     return 0;
 }
