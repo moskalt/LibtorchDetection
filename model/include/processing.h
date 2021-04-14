@@ -5,7 +5,7 @@
 #ifndef LIBTORCHDETECTION_PROCESSING_H
 #define LIBTORCHDETECTION_PROCESSING_H
 
-std::vector<std::string> predict(char* buffer);
+void predict(char* buffer, const char* argv[]);
 
 
 #endif //LIBTORCHDETECTION_PROCESSING_H

@@ -11,29 +11,21 @@
 #include "ctime"
 
 
-#define BUFF_SIZE 307200
+#define BUFF_SIZE 519168 //416*416*3
 
-std::vector<std::string> predict(char* buffer);
-
-
-int main(int argc, const char* argv[]){
-    if(argc !=2){
-        std::cerr << "usage: processing <path-to-exported-script-model>\n";
-        return -1;
-    }
+void predict(char* buffer, const char* argv[]){
     torch::jit::script::Module module;
     try{
         module = torch::jit::load(argv[1]);
     }
     catch (const c10::Error& e){
         std::cerr << "error loading the model\n";
-        return -1;
+        return ;
     }
-    std::cout << "ok" << std::endl;
-    std::vector<torch::jit::IValue> inputs;
+     std::vector<torch::jit::IValue> inputs;
     auto input_tensor = torch::ones({1,3,416,416});
     inputs.push_back(input_tensor);
     auto out = module.forward(inputs);
     std::cout << out << std::endl;
-    return 0;
-}
+};
+
